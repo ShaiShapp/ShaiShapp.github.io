@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>הכרת הארץ</title>
+	<script type="text/javascript" src="Geography.js"></script>
+	<link rel='stylesheet' media='screen and (max-width: 800px)' href='GeographyMobile.css' />
+</head>
+
+<body dir="rtl" onload="initGame();">
+
+<p>
+מאת: <a href="https://stuffshaireads.wordpress.com/">שי שפירא</a>
+</p>
+<ul id="CityList">
+</ul>
+
+<!--img src='Israel.jpg' style="height: 500px;" usemap="#IsraelCitiesMap" /-->
+<label id="TargetLabel" style="position:fixed; cursor:pointer; top:0px; left:0px; width:727px; height:30px; font-size:18px; background-color:#EEE; border:1px solid #CCC; border-radius:4px; text-align:center; z-index:1" onclick="toggleCityListMobile();">בדיקה</label>
+<label id="ReminderLabel" style="display:none; position:absolute; cursor:pointer; top:0px; left:0px; width:100px; height:20px; font-size:16px; background-color:#EEE; border:1px solid #CCC; border-radius:4px; text-align:center; z-index:1"">בדיקה</label>
+<div id="CityListMobileDiv" style="display:none; overflow-y:scroll; position:fixed; top:30px; left:0px; width:727px; height:200px; font-size:18px; background-color:#EEE; border:1px solid #CCC; border-radius:4px; text-align:right; z-index:1">
+	<ul id="CityListMobile">
+	</ul>
+</div>
+<canvas style="position:absolute; top:30px; left:0px; text-align:center; background:url('Israel.jpg')" id="scene" dir="rtl" width="727" height="1731" tabindex='1'>לצערנו, דפדפן זה אינו מסוגל להציג את המשחק. המשחק עובד על הגרסאות העדכניות של פיירפוקס, כרום, אקספלורר, אופרה וספארי – שקלו לשדרג את הדפדפן שלכם לגרסה העדכנית ביותר.</canvas>
+
+<map id="IsraelCitiesMap" name="IsraelCitiesMap">
+<area shape="poly" coords="105,60, 115,60, 115,80, 105,80" onclick="alert('Haifa');"></area>
+<area shape="poly" coords="130,190, 140,190, 140,210, 130,210" onclick="alert('Jerusalem');"></area>
+<area shape="poly" coords="95,72, 105,72, 105,92, 95,92" onclick="alert('Tel Aviv');"></area>
+</map>
+
+</body>
+
+</html>
